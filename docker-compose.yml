@@ -1,0 +1,35 @@
+version: '3'
+
+services:
+  postgres:
+    image: postgres:latest
+    container_name: postgres_container
+    environment:
+      POSTGRES_DB: surfWalletDB
+      POSTGRES_USER: surfWalletAdmin
+      POSTGRES_PASSWORD: Zala1234
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+  django:
+    image: your-django-image:latest
+    container_name: django_container
+    depends_on:
+      - postgres
+    environment:
+      DATABASE_URL: postgres://myuser:mypassword@postgres:5432/mydatabase
+    ports:
+      - "8000:8000"
+
+  angular:
+    image: your-angular-image:latest
+    container_name: angular_container
+    ports:
+      - "4200:4200"
+    depends_on:
+      - django
+
+volumes:
+  postgres_data:
