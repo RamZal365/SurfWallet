@@ -1,9 +1,14 @@
 <!-- Toolbar -->
 <mat-toolbar color="primary">
-    <mat-toolbar-row>
-        <button mat-icon-button aria-label="Example icon button with a home icon">
-          <mat-icon>menu</mat-icon>
-        </button>
-    
+  <mat-toolbar-row>
+    <button
+      mat-icon-button
+      (click)="this.sidenavService.toggleSidenav()"
+      aria-label="Example icon button with a home icon"
+    >
+      <mat-icon>menu</mat-icon>
+    </button>
+
     <span>Surf wallet</span>
-    </mat-toolbar-row>
+  </mat-toolbar-row></mat-toolbar
+>

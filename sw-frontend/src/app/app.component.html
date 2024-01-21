@@ -8,7 +8,12 @@
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
 
 <sw-toolbar></sw-toolbar>
-<router-outlet></router-outlet>
+<mat-drawer-container hasBackdrop="true" >
+    <mat-drawer #drawer class="sidenav" mode="side" [opened]="this.isExpanded">
+        <sw-sidenav></sw-sidenav>
+    </mat-drawer>
+    <router-outlet></router-outlet>
+</mat-drawer-container>
 
 
 

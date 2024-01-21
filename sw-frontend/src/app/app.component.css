@@ -1,0 +1,7 @@
+mat-drawer, 
+mat-drawer.md-locked-open, 
+mat-drawer.md-closed.md-locked-open-add-active {
+    min-width: 200px !important;
+    width: 25vw !important;
+    max-width: 400px !important;
+} 
