@@ -1,0 +1,3 @@
+*.pyc
+sw-backend/.venv/*
+sw-frontend/package-lock.json
