@@ -1,3 +1,11 @@
-<div style="margin-top: 50px; margin-inline: 100px; height: 900px;">
-  <h1>surfboards works!</h1>
+<div class="d-flex flex-row justify-content-center" style="margin-top:50px; margin-inline:100px; min-height: 500px;">
+  <div>
+    <h1>surfboards works!</h1>
+    <sw-button buttonText="Surfboards" class="col-md-4" (click)="getSurfboards()"></sw-button>
+  </div>
+  <div class="d-flex flex-row justify-content-between p-2">
+    <div style="height: 100px" class="d-flex flex-column justify-content-between p-2">
+      <button class="p-2" mat-raised-button color="accent" *ngFor="let surfboard of surfboards">{{surfboard.owner}}</button>
+    </div>
+  </div>
 </div>
