@@ -18,19 +18,22 @@ import { MatButtonModule } from '@angular/material/button';
   ],
   providers: []
 })
+
 export class SurfboardsComponent {
   title = "Surf Wallet"
 
   surfboards: any[] = [];
-  wetsuits: any[] = [];
-  spots: any[] = [];
 
-  constructor(private apiService: ApiService){}
-
-  getSurfboards(){
+  constructor(private apiService: ApiService){
     this.apiService.list('surfboards').subscribe((data: any[]) => {
       this.surfboards = data;
       console.log(data);
     });
+  }
+
+  getSurfboards() {
+    // this.apiService.list('surfboards').subscribe((data: any[]) => {
+    //   this.surfboards = data;
+    // });
   }
 }
